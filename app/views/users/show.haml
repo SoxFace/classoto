@@ -15,3 +15,6 @@
 
 %p
 = render :partial => 'new_comment'
+
+- @user.comments.each do |comment|
+  =comment.body
