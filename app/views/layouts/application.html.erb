@@ -40,18 +40,9 @@
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
-
-    <h1>Welcome to Classoto <%= @current_user.try(:name) %></h1>
-    <h2><%= flash[:error] if flash[:error].present? %></h2>
     </div>
 
 </div>
-
-<nav>
-  <ul>
-    <%== nav_menu %>
-  </ul>
-</nav>
 
 <div class="container">
   <%= yield %>

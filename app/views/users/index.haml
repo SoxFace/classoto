@@ -9,16 +9,11 @@
           %h2= link_to(user.name, user)
           %h4
             %li
-              ID: #{user.id}
-            %li
-              Cohort ID: #{user.cohort_id}
-            %li
-              Admin: #{user.is_admin}
+              Email:
             %li
               Class: #{user.cohort.cohort}
             %li
               Cohort: #{user.cohort.year}
-
-          / - if user.cohorts.any?
-          /   %li
-          /     Cohort: #{cohort.year}
+            - if user.is_admin?
+              %li
+                Admin: #{user.is_admin}

@@ -1,13 +1,16 @@
 %h1= @user.name
 %p
-  = link_to 'Edit user', edit_user_path(@user)
+  = link_to 'Edit user', edit_user_path(@user), :type => "button", :class => "btn.btn-info"
   = link_to 'Delete user', @user, :method => 'delete', :data => { :confirm => "Are you sure? "}
-%p
-  = image_tag @user.image, :class => 'portrait'
+  %button.btn.btn-info{:type => "button"} Edit Broken
+  %button.btn.btn-danger{:type => "button"} Delete Broken
 %h4
   %li
-    ID: #{@user.id}
+    Email:
   %li
-    Cohort ID: #{@user.cohort_id}
+    Class: #{@user.cohort.cohort}
   %li
-    Admin: #{@user.is_admin}
+    Cohort: #{@user.cohort.year}
+%p
+  = image_tag @user.image, :class => 'portrait'
+
