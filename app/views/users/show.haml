@@ -1,7 +1,8 @@
 %h1= @user.name
 %p
   = link_to('Edit user', edit_user_path(@user), :class => 'btn btn-success', :type => "button")
-  = link_to('Delete user', @user, :method => 'delete', :class => 'btn btn-danger', :data => { :confirm => "Are you sure? "})
+  - if @user.is_admin?
+    = link_to('Delete user', @user, :method => 'delete', :class => 'btn btn-danger', :data => { :confirm => "Are you sure? "})
 %h4
   %li
     Email:
@@ -11,3 +12,6 @@
     Cohort: #{@user.cohort.year}
 %p
   = image_tag @user.image, :class => 'portrait'
+
+%p
+= render :partial => 'new_comment'

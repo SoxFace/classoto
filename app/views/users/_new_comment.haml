@@ -1,0 +1,7 @@
+= form_for Comment.new do |f|
+  %div.form-group
+    = f.label :Comment
+    = f.text_field :body, :autofocus => true, :class => 'form-control'
+
+  %div.form-group
+    = f.submit "Add Comment", :class => 'btn btn-default'
