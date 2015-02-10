@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :check_if_admin, :only => [:index]
+  before_action :check_if_logged_in, :only => [:index]
 
   def new
     @user = User.new
@@ -48,6 +49,10 @@ class UsersController < ApplicationController
   private
   def check_if_admin
     redirect_to(root_path) unless @current_user.present? && @current_user.is_admin?
+  end
+
+  def check_if_logged_in
+    redirect_to(root_path) unless @current_user.present?
   end
 
 end
