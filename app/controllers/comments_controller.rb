@@ -6,14 +6,10 @@ class CommentsController < ApplicationController
 
   def create
     comment = Comment.new comment_params
-    comment.creator_id = @current_user.id
-    comment.user_id
-
-    # redirect_to comment.user
+    comment.creator = @current_user
+    comment.user_id = params[:comment][:user_comment_page_id]
     comment.save
-    # comment = Comment.create comment_params
-    user = User.find params[:comment][:user_comment_page_id]
-    redirect_to user
+    redirect_to comment.user
   end
 
   def edit
@@ -31,7 +27,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:body, :user_id)
+    params.require(:comment).permit(:body, :user_id, :creator_id)
   end
 
 end

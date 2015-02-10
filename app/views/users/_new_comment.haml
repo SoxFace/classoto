@@ -1,3 +1,7 @@
+/ - @user.comments.each do |comment|
+/   %p= @comment.body
+/   %p= time_ago_in_words comment.created_at ago
+
 = form_for @comment do |f|
   %div.row
     %div.col-md-6
