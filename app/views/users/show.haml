@@ -17,9 +17,13 @@
 
     %p
     = render :partial => 'new_comment'
-  %div.col-md-4
-  %h2 #{@user.name}'s quick and dirty comments
-  - @user.comments.each do |comment|
-    =comment.body
-    %p= comment.creator
-    %p= time_ago_in_words comment.created_at
+
+  %div.col-md-4.side
+    %table.table.table-hover
+    %h4 Comments for #{@user.name}
+    %hr
+    - @user.comments.each do |comment|
+      =comment.body
+      %p
+        %i #{@current_user.name.capitalize} wrote this #{time_ago_in_words comment.created_at} ago
+      %hr

@@ -5,3 +5,8 @@ body {
 footer {
   padding-left: 20px;
 }
+
+.col-md-4.side {
+  background-color: Gainsboro;
+  border-radius: 0px 0px 40px 40px;
+}
