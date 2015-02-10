@@ -1,18 +1,25 @@
-%h1 Admin Class Photo
+= render :partial => 'filter'
 
-- @users.in_groups_of(3) do |user|
+%h1 List View Classmates
+
+- @users.in_groups_of(1) do |user|
   .row
     - user.compact.each do |user|
-      .col-md-4
-        .user_index
+      .col-md-2
+        .thumbnail
           = link_to(image_tag(user.image), user)
-          %h2= link_to(user.name, user)
-          %h4
-            %li
-              Class: #{user.cohort.cohort}
-            %li
-              Cohort: #{user.cohort.year}
-          %h4
-            - if user.is_admin?
-              %li
-                Admin: #{user.is_admin}
+        %hr
+      .col-md-2
+        %h4
+        = link_to(user.name, user)
+      .col-md-2
+        %h5
+          Class: #{user.cohort.cohort}
+      .col-md-2
+        %h5
+          Cohort: #{user.cohort.year}
+      .col-md-4
+        %h5
+          - if user.is_admin?
+            Admin: #{user.is_admin}
+

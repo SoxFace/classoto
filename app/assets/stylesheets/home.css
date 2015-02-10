@@ -15,3 +15,7 @@ footer {
   background-color: Gainsboro;
   border-radius: 5px 40px 5px;
 }
+
+.thumbnail {
+  width: 30%;
+}
