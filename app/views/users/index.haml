@@ -1,21 +1,23 @@
 = render :partial => 'filter'
+= render :partial => 'search'
 
 %h1 Grid View of Classmates
 
-- @users.in_groups_of(3) do |user|
-  .row
-    - user.compact.each do |user|
-      .col-md-4
-        .user_index
-          = link_to(image_tag(user.image), user)
-          %h2= link_to(user.name, user)
-          %h4
-            %li
-              Email:
-            %li
-              Class: #{user.cohort.cohort}
-            %li
-              Cohort: #{user.cohort.year}
-            - if user.is_admin?
+-if @users
+  - @users.in_groups_of(3) do |user|
+    .row
+      - user.compact.each do |user|
+        .col-md-4
+          .user_index
+            = link_to(image_tag(user.image), user)
+            %h2= link_to(user.name, user)
+            %h4
               %li
-                Admin: #{user.is_admin}
+                Email:
+              %li
+                Class: #{user.cohort.cohort}
+              %li
+                Cohort: #{user.cohort.year}
+              - if user.is_admin?
+                %li
+                  Admin: #{user.is_admin}

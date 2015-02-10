@@ -1,0 +1,8 @@
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
+<%= form_tag users_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search for User", :name => nil %>
+  </p>
+  <% end %>

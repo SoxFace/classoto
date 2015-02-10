@@ -16,7 +16,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    if params[:search]
+      @users = User.find_by_name(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+      # @user = User.find_by_name(params[:params]) if params[:name].present?
+    else
+      @users = User.all
+    end
   end
 
   def show
@@ -43,7 +48,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :password, :password_confirmation, :image, :cohort_id)
+    params.require(:user).permit(:name, :password, :password_confirmation, :image, :cohort_id, :search)
   end
 
   private
