@@ -1,3 +1,8 @@
+.btn.btn-default.navbar-btn {
+  position: absolute;
+  right: 10px;
+}
+
 body { 
   padding-top: 70px; 
 }

@@ -22,7 +22,7 @@
           <a class="navbar-brand" href="<%= root_path %>">Classoto</a>
           <a class="navbar-brand" href="<%= users_path %>">Index</a>
           <% if @current_user.present? %>
-         <%= link_to('Sign out ' + @current_user.name, login_path, :method => :delete, :class => "navbar-brand") %>
+          <%= link_to('Sign out ' + @current_user.name, login_path, :method => :delete, :class => "btn btn-default navbar-btn") %>
          <% end %>
         </div>
         <% if @current_user.nil? %>
