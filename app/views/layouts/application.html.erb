@@ -13,7 +13,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" href="<%= login_path %>">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -25,7 +25,7 @@
           <%= link_to('Sign out ' + @current_user.name, login_path, :method => :delete, :class => "btn btn-default navbar-btn") %>
          <% end %>
         </div>
-
+        
         <% if @current_user.nil? %>
         <div id="navbar" class="navbar-collapse collapse">
         <%= form_tag login_path, :class => "navbar-form navbar-right" do %>
