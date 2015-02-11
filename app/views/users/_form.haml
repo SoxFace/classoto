@@ -23,6 +23,6 @@
     = f.file_field :image, :class => 'form-control'
   %div.form-group
     = f.label :cohort_id
-    = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.year, cohort.id] }, :class => 'form-control'
+    = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.cohort, cohort.id] }, :class => 'form-control'
   %div.form-group
     = f.submit "Sign Me Up", :class => 'btn btn-success'
