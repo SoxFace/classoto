@@ -49,4 +49,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  def default_url
+    "fallback/" + [version_name, "student_placeholder.png"].compact.join('_')
+  end
+
 end
