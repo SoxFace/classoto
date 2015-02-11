@@ -7,20 +7,19 @@
   .row
     - user.compact.each do |user|
       .col-md-4
-        .profile
-          = image_tag user.image_url(:thumb)
-          / = link_to(image_tag user.image_url(:thumb), user)
-          %h2= link_to(user.name, user)
-          %h4
+        = image_tag user.image_url(:thumb) if user.image?
+        / = link_to(image_tag user.image_url(:thumb), user)
+        %h2= link_to(user.name, user)
+        %h4
+          %li
+            Email:
+          %li
+            Class: #{user.cohort.cohort}
+          %li
+            Cohort: #{user.cohort.year}
+          - if user.is_admin?
             %li
-              Email:
-            %li
-              Class: #{user.cohort.cohort}
-            %li
-              Cohort: #{user.cohort.year}
-            - if user.is_admin?
-              %li
-                Admin: #{user.is_admin}
+              Admin: #{user.is_admin}
 
 - if @users.length == 0
   .alert.alert-danger{:role => "alert"}
