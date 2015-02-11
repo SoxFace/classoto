@@ -26,6 +26,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'haml'
 gem 'rails_12factor', group: :production
+# file uploads
+gem 'carrierwave'
+# image post processing
+gem 'mini_magick'
+# cloud storage
+gem 'cloudinary'
+
 
 group :development do
  gem 'pry-rails'
