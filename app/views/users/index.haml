@@ -8,8 +8,7 @@
     - user.compact.each do |user|
       .col-md-4
         .user_index
-          = link_to(image_tag(user.image_url, :class => :thumb), user) 
-          = image_tag user.image_url(:thumb), :class => 'profile'
+          = link_to(image_tag(user.image_url), user) 
           %h2= link_to(user.name, user)
           %h4
             %li
@@ -21,3 +20,7 @@
             - if user.is_admin?
               %li
                 Admin: #{user.is_admin}
+
+- if @users.length == 0
+  .alert.alert-danger{:role => "alert"}
+    %h3 Sorry, we can't find that user, try again!
