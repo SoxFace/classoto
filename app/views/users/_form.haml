@@ -20,7 +20,7 @@
     = f.password_field :password_confirmation, :class => 'form-control'
   %div.form-group
     = f.label :image
-    = f.file_field :image, :class => 'form-control'
+    = f.file_field :image, :required => true, :class => 'form-control'
   %div.form-group
     = f.label :cohort_id
     = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.cohort, cohort.id] }, :class => 'form-control'
