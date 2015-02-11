@@ -10,8 +10,6 @@
         = image_tag user.image_url(:thumb) if user.image?
         %h2= link_to(user.name, user)
         %h4
-          %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"}
-          Email: #{user.email}
           %p
             %span.glyphicon.glyphicon-info-sign{"aria-hidden" => "true"}
             Class: #{user.cohort.cohort}
@@ -21,6 +19,9 @@
           - if user.is_admin?
             %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
             Admin: #{user.is_admin}
+          %p
+          %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"}
+          %a{:href => "mailto:#{user.email}"} #{user.email}
 
 - if @users.length == 0
   .alert.alert-danger{:role => "alert"}
