@@ -10,6 +10,9 @@
     = f.label :name
     = f.text_field :name, :autofocus => true, :required => true, :class => 'form-control'
   %div.form-group
+    = f.label :email
+    = f.text_field :email, :required => true, :class => 'form-control'
+  %div.form-group
     = f.label :password
     = f.password_field :password, :class => 'form-control'
   %div.form-group
@@ -18,9 +21,6 @@
   %div.form-group
     = f.label :image
     = f.file_field :image, :class => 'form-control'
-  / %div.form-group
-  /   = f.label :image_url, 'Upload an image'
-  /   = f.file_field :image_url, :class => 'form-control'
   %div.form-group
     = f.label :cohort_id
     = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.year, cohort.id] }, :include_blank => true, :class => 'form-control'

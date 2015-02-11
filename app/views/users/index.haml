@@ -8,21 +8,20 @@
     - user.compact.each do |user|
       .col-md-4
         = image_tag user.image_url(:thumb) if user.image?
-        / = link_to(image_tag user.image_url(:thumb), user)
         %h2= link_to(user.name, user)
         %h4
-          %li
-            Email:
-          %li
+          %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"}
+          Email: #{user.email}
+          %p
+            %span.glyphicon.glyphicon-info-sign{"aria-hidden" => "true"}
             Class: #{user.cohort.cohort}
-          %li
+          %p
+            %span.glyphicon.glyphicon-time{"aria-hidden" => "true"}
             Cohort: #{user.cohort.year}
           - if user.is_admin?
-            %li
-              Admin: #{user.is_admin}
+            %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+            Admin: #{user.is_admin}
 
 - if @users.length == 0
   .alert.alert-danger{:role => "alert"}
     %h4 Sorry, we can't find that user, try again!
-
-    / %p= image_tag movie.poster_url(:thumb) if movie.poster?

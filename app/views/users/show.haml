@@ -6,12 +6,14 @@
       - if @current_user.is_admin?
         = link_to('Delete user', @user, :method => 'delete', :class => 'btn btn-danger', :data => { :confirm => "Are you sure? "})
     %h4
-      %li
-        Email:
-      %li
-        Class: #{@user.cohort.cohort}
-      %li
-        Cohort: #{@user.cohort.year}
+      %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"}
+      Email: #{@user.email}
+      %p
+      %span.glyphicon.glyphicon-info-sign{"aria-hidden" => "true"}
+      Class: #{@user.cohort.cohort}
+      %p
+      %span.glyphicon.glyphicon-time{"aria-hidden" => "true"}
+      Cohort: #{@user.cohort.year}
     .portrait
       = image_tag @user.image, :class => 'portrait'
 

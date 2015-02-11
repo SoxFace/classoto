@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150207053107) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.text     "image"
+    t.text     "email"
     t.integer  "cohort_id"
     t.datetime "created_at"
     t.datetime "updated_at"

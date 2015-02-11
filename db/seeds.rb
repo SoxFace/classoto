@@ -1,7 +1,7 @@
 User.destroy_all
 Cohort.destroy_all
 
-u1 = User.create(:name => 'Sonya', :password => 'chicken', :password_confirmation => 'chicken')
+u1 = User.create(:name => 'Sonya', :email => 'sonyacorcoran@gmail.com', :password => 'chicken', :password_confirmation => 'chicken')
 u2 = User.create(:name => 'Laura', :password => 'chicken', :password_confirmation => 'chicken')
 u3 = User.create(:name => 'Lynette', :password => 'chicken', :password_confirmation => 'chicken')
 u4 = User.create(:name => 'Joel', :password => 'chicken', :password_confirmation => 'chicken', :remote_image_url => "http://chronicle.com/blogs/profhacker/files/2013/04/Professortocat_v2-300x300.png")
