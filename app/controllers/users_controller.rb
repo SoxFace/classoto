@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    params[:image] = params[:remote_image_url]
+    # params[:image] = params[:image_url]
     @user = User.new user_params
     if @user.save
       redirect_to root_path

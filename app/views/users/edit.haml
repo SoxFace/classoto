@@ -16,8 +16,8 @@
     = f.label :image
     = f.url_field :image, :class => 'form-control'
   %div.form-group
-    = f.label :remote_image_url, 'Upload an image'
-    = f.file_field :remote_image_url, :class => 'form-control'
+    = f.label :image, 'Upload an image'
+    = f.file_field :image, :class => 'form-control'
     %hr
     = f.label :cohort_id
     = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.year, cohort.id] }, :include_blank => true, :class => 'form-control'
