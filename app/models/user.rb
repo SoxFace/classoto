@@ -17,4 +17,6 @@ class User < ActiveRecord::Base
   belongs_to :cohort
   has_many :comments
   validates :name, :presence => true, :uniqueness => true
+
+  mount_uploader :image, ImageUploader
 end

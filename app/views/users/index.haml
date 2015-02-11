@@ -7,7 +7,8 @@
     - user.compact.each do |user|
       .col-md-4
         .user_index
-          = link_to(image_tag(user.image), user)
+          = link_to(image_tag(user.image_url, :class => :thumb), user) 
+          = image_tag user.image_url(:thumb), :class => 'profile'
           %h2= link_to(user.name, user)
           %h4
             %li
