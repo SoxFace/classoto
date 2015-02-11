@@ -18,7 +18,7 @@
             Cohort: #{user.cohort.year}
           - if user.is_admin?
             %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
-            Admin: #{user.is_admin}
+            Admin
           %p
           %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"}
           %a{:href => "mailto:#{user.email}"} #{user.email}

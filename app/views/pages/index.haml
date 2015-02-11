@@ -18,7 +18,12 @@
       .col-md-2
         %h5
           Cohort: #{user.cohort.year}
-      .col-md-4
+      .col-md-3
+        %h5
+          %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"} 
+          %a{:href => "mailto:#{user.email}"} #{user.email}
+      .col-md-1
         %h5
           - if user.is_admin?
-            Admin: #{user.is_admin}
+            %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+            Admin
