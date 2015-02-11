@@ -25,3 +25,7 @@ footer {
  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px #e92115 ;
  outline: 0 none;
 }
+
+.portrait {
+  width: 50%;
+}

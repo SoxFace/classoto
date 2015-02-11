@@ -24,3 +24,6 @@
           - if user.is_admin?
             Admin: #{user.is_admin}
 
+- if @users.length == 0
+  .alert.alert-danger{:role => "alert"}
+    %h4 Sorry, we can't find that user, try again!

@@ -1,6 +1,6 @@
 <form class="navbar-form navbar-right" role="search">
 <%= form_tag(users_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], :class => "form-control", placeholder: "Search Users" %>
-  <%= submit_tag "Search", :name => nil, :class => "btn btn-default" %>
+  <%= submit_tag "Go", :name => nil, :class => "btn btn-default" %>
 <% end %>
 </form>

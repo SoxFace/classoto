@@ -7,8 +7,9 @@
   .row
     - user.compact.each do |user|
       .col-md-4
-        .user_index
-          = link_to(image_tag(user.image_url), user) 
+        .profile
+          = image_tag user.image_url(:thumb)
+          / = link_to(image_tag user.image_url(:thumb), user)
           %h2= link_to(user.name, user)
           %h4
             %li
@@ -24,3 +25,5 @@
 - if @users.length == 0
   .alert.alert-danger{:role => "alert"}
     %h4 Sorry, we can't find that user, try again!
+
+    / %p= image_tag movie.poster_url(:thumb) if movie.poster?
