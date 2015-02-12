@@ -2,8 +2,10 @@
   %div.col-md-8
     %h1= @user.name
     %p
-      = link_to('Edit user', edit_user_path(@user), :class => 'btn btn-success', :type => "button")
+      - if @user.id == @current_user.id
+        = link_to('Edit user', edit_user_path(@user), :class => 'btn btn-success', :type => "button")
       - if @current_user.is_admin?
+        = link_to('Edit user', edit_user_path(@user), :class => 'btn btn-success', :type => "button")
         = link_to('Delete user', @user, :method => 'delete', :class => 'btn btn-danger', :data => { :confirm => "Are you sure? "})
     %h4
       %p
