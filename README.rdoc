@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Classoto is a simple, user driven site which enables student's to upload a selfie which helps academics get to know them a little easier.
 
-Things you may want to cover:
+* FEATURES
+Simple search and commenting
 
-* Ruby version
+* DEMO
+You can see a running version at http://classoto.herokuapp.com
 
-* System dependencies
+* INSTALLATION
+This application requires Postgres to be installed.
 
-* Configuration
+* USAGE
+Rails server
 
-* Database creation
+* SEED DATA
+rake db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* CREDIT
+Full credit goes to Joel Turnbull and Daniel Tsui (General Assembly, WDI8) for their patience, guidance and support.
