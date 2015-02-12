@@ -8,5 +8,6 @@ u4 = User.create(:name => 'Joel', :password => 'chicken', :password_confirmation
 admin = User.create(:name => 'admin', :password => 'admin', :password_confirmation => 'admin', :remote_image_url => "https://lh6.ggpht.com/Fudz3AikqUsxWYDgQHZMR1PSPCtyl1zVwJa1Do3B8roz3sOhmhIh6g_YHLVWqHo0EX4=w300", :is_admin => true)
 
 c1 = Cohort.create(:cohort => 'WDI 8', :year => '2015')
+c2 = Cohort.create(:cohort => 'WDI 9', :year => '2015')
 
 c1.users << u1 << u2 << u3 << u4 << admin
