@@ -3,6 +3,13 @@
   right: 10px;
 }
 
+.btn.btn-primary {
+  /*-webkit-animation-duration: 5s;*/
+  -webkit-animation-delay: 3s;
+  /*-webkit-animation-iteration-count: infinite;*/
+}
+
+
 body { 
   padding-top: 70px; 
 }
