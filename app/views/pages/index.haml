@@ -29,5 +29,4 @@
             Admin
 
 %h2 This is the React User Component
-- @users.each do |user|
-  = react_component "Users", { user: user.name}
+= react_component "Users", { users: @users}

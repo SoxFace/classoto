@@ -1,11 +1,17 @@
 var Users = React.createClass({
-  render() {
+
+  render () {
+
+    const userProps = this.props.users
+
+    const user = userProps.map(userprop => (
+      <li>{userprop.name}</li>
+    ))
+
     return (
-      <div>
-        <p>This is the users component</p>
-        {this.props.user}
-        <hr />
-      </div>
+      <ul>
+        {user}
+      </ul>
     )
   }
-})
+});
