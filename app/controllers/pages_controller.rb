@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
   def index
     @users = User.all.order('name ASC')
-    render json: @users
+    # render json: @users
   end
 
 end

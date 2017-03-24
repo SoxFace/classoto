@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   def self.search(query)
-    where("name ilike ?", "%#{query}%") 
+    where("name ilike ?", "%#{query}%")
   end
 
 end

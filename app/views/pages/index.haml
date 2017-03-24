@@ -1,6 +1,7 @@
 = render :partial => 'filter'
 
 %h2 List of Classmates
+= react_component('Pages')
 
 - @users.in_groups_of(1) do |user|
   .row
@@ -20,7 +21,7 @@
           Cohort: #{user.cohort.year}
       .col-md-3
         %h5
-          %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"} 
+          %span.glyphicon.glyphicon-envelope{"aria-hidden" => "true"}
           %a{:href => "mailto:#{user.email}"} #{user.email}
       .col-md-1
         %h5

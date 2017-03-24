@@ -34,6 +34,7 @@ gem 'mini_magick'
 gem 'cloudinary'
 
 gem 'rb-readline'
+gem 'react-rails'
 
 
 group :development do
