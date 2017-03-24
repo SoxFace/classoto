@@ -19,3 +19,14 @@ rake db:seed
 
 * CREDIT
 Full credit goes to Joel Turnbull and Daniel Tsui (General Assembly, WDI8) for their patience, guidance and support.
+
+## Running app in 2017
+
+`rvm -use ruby-4.2.0` - switches to ruby version of app
+`add rb-readline gem` - TODO: find out why you need this
+`bundle update`
+`bundle install`
+`rake db:create`
+`rake db:migrate`
+`rake db:seed`
+* update database.yml development.username to your machine's name
