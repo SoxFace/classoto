@@ -35,6 +35,8 @@ gem 'cloudinary'
 
 gem 'rb-readline'
 gem 'react-rails'
+gem 'react-rails-hot-loader'
+
 
 
 group :development do
