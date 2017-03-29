@@ -6,10 +6,13 @@ var Users = React.createClass({
 
     const userProps = this.props.users
 
+    console.log(userProps)
+
     const user = userProps.map(userprop => (
       <div className="row" key={userprop.id}>
         <div className="col-md-2">
           <img src={userprop.image.url} className="thumbnail" />
+          <p>{userprop.comments}</p>
         </div>
         <div className="col-md-2">
           <a href={"users/" + userprop.id}>{userprop.name}</a>
